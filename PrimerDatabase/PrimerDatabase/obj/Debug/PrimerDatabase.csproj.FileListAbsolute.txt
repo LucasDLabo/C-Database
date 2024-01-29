@@ -1,0 +1,17 @@
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\bin\Debug\PrimerDatabase.exe.config
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\bin\Debug\PrimerDatabase.exe
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\bin\Debug\PrimerDatabase.pdb
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\bin\Debug\MySql.Data.dll
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\bin\Debug\System.Memory.dll
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\bin\Debug\System.Numerics.Vectors.dll
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\bin\Debug\System.Buffers.dll
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\bin\Debug\MySql.Data.xml
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\obj\Debug\PrimerDatabase.csproj.AssemblyReference.cache
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\obj\Debug\PrimerDatabase.Form1.resources
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\obj\Debug\PrimerDatabase.Properties.Resources.resources
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\obj\Debug\PrimerDatabase.csproj.GenerateResource.cache
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\obj\Debug\PrimerDatabase.csproj.CoreCompileInputs.cache
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\obj\Debug\PrimerDatabase.csproj.CopyComplete
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\obj\Debug\PrimerDatabase.exe
+F:\Documentos\C#\PrimerProyecto\PrimerDatabase\PrimerDatabase\obj\Debug\PrimerDatabase.pdb
