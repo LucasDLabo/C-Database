@@ -43,8 +43,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboYear = new System.Windows.Forms.ComboBox();
+            this.comboCarrera = new System.Windows.Forms.ComboBox();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.txtBirth = new System.Windows.Forms.TextBox();
             this.txtLastname = new System.Windows.Forms.TextBox();
@@ -55,6 +55,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -131,6 +132,7 @@
             // 
             this.txtContra.Location = new System.Drawing.Point(83, 164);
             this.txtContra.Name = "txtContra";
+            this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(100, 20);
             this.txtContra.TabIndex = 8;
             // 
@@ -195,8 +197,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.btnCargar);
+            this.groupBox1.Controls.Add(this.comboYear);
+            this.groupBox1.Controls.Add(this.comboCarrera);
             this.groupBox1.Controls.Add(this.txtDNI);
             this.groupBox1.Controls.Add(this.txtBirth);
             this.groupBox1.Controls.Add(this.txtLastname);
@@ -214,33 +217,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del alumno";
             // 
-            // comboBox2
+            // comboYear
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboYear.FormattingEnabled = true;
+            this.comboYear.Items.AddRange(new object[] {
             "1er",
             "2do",
             "3er",
             "4to",
             "5to"});
-            this.comboBox2.Location = new System.Drawing.Point(144, 168);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 11;
+            this.comboYear.Location = new System.Drawing.Point(144, 168);
+            this.comboYear.Name = "comboYear";
+            this.comboYear.Size = new System.Drawing.Size(121, 21);
+            this.comboYear.TabIndex = 11;
             // 
-            // comboBox1
+            // comboCarrera
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboCarrera.FormattingEnabled = true;
+            this.comboCarrera.Items.AddRange(new object[] {
             "Ingeniería Industrial",
             "Ingeniería Mecánica",
             "Ingeniería Informática",
             "Ingeniería Naval",
             "Ingeniería Química"});
-            this.comboBox1.Location = new System.Drawing.Point(144, 141);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 10;
+            this.comboCarrera.Location = new System.Drawing.Point(144, 141);
+            this.comboCarrera.Name = "comboCarrera";
+            this.comboCarrera.Size = new System.Drawing.Size(121, 21);
+            this.comboCarrera.TabIndex = 10;
             // 
             // txtDNI
             // 
@@ -324,6 +327,16 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Nombre:";
             // 
+            // btnCargar
+            // 
+            this.btnCargar.Location = new System.Drawing.Point(144, 212);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.TabIndex = 12;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,13 +377,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboYear;
+        private System.Windows.Forms.ComboBox comboCarrera;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.TextBox txtBirth;
         private System.Windows.Forms.TextBox txtLastname;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnCargar;
     }
 }
 
