@@ -87,5 +87,52 @@ namespace PrimerDatabase
                 conexionbd.Close();
             }
         }
+
+        private void btnBuscarPorNombre_Click(object sender, EventArgs e)
+        {
+            labelID.Text = "ID:";
+            labelNombre.Text = "Nombre:";
+            labelApel.Text = "Apellido:";
+            labelDNI.Text = "DNI:";
+            labelNac.Text = "Fecha de nacimiento:";
+            labelCarr.Text = "Carrera:";
+            labelYear.Text = "Año:";
+            String nombre = txtBuscarNombre.Text;
+            String apellido = txtBuscarApellido.Text;
+
+            MySqlDataReader reader = null;
+
+            String BuscarAlumnoPorNombre = "SELECT * FROM alumno WHERE nombre LIKE '" + nombre + "'";
+            MySqlConnection conexionbd = Conexion.conexion();
+            conexionbd.Open();
+
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(BuscarAlumnoPorNombre, conexionbd);
+                reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while(reader.Read())
+                    {
+                        labelID.Text = "ID: " + reader.GetString(0);
+                        labelNombre.Text = "Nombre: " + reader.GetString(1);
+                        labelApel.Text = "Apellido: " + reader.GetString(2);
+                        labelDNI.Text = "DNI: " + reader.GetString(4);
+                        labelNac.Text = "Fecha de nacimiento: " + reader.GetString(3);
+                        labelCarr.Text = "Carrera: " + reader.GetString(5);
+                        labelYear.Text = reader.GetString(6) + " Año";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron registros del alumno");
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al buscar" + ex.Message);
+            }
+            finally { conexionbd.Close(); }
+        }
     }
 }

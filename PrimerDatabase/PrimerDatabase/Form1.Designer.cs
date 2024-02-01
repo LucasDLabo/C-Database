@@ -43,6 +43,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.comboYear = new System.Windows.Forms.ComboBox();
             this.comboCarrera = new System.Windows.Forms.ComboBox();
             this.txtDNI = new System.Windows.Forms.TextBox();
@@ -55,11 +56,26 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnCargar = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtBuscarNombre = new System.Windows.Forms.TextBox();
+            this.btnBuscarPorNombre = new System.Windows.Forms.Button();
+            this.txtBuscarApellido = new System.Windows.Forms.TextBox();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.labelApel = new System.Windows.Forms.Label();
+            this.labelNac = new System.Windows.Forms.Label();
+            this.labelDNI = new System.Windows.Forms.Label();
+            this.labelCarr = new System.Windows.Forms.Label();
+            this.labelYear = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -157,6 +173,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(166, 22);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -192,7 +209,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(443, 311);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Formulario";
+            this.tabPage2.Text = "Inscripción";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -216,6 +233,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del alumno";
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.Location = new System.Drawing.Point(144, 212);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.TabIndex = 12;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // comboYear
             // 
@@ -327,15 +354,143 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Nombre:";
             // 
-            // btnCargar
+            // tabPage3
             // 
-            this.btnCargar.Location = new System.Drawing.Point(144, 212);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(75, 23);
-            this.btnCargar.TabIndex = 12;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            this.tabPage3.Controls.Add(this.labelID);
+            this.tabPage3.Controls.Add(this.labelYear);
+            this.tabPage3.Controls.Add(this.labelCarr);
+            this.tabPage3.Controls.Add(this.labelDNI);
+            this.tabPage3.Controls.Add(this.labelNac);
+            this.tabPage3.Controls.Add(this.labelApel);
+            this.tabPage3.Controls.Add(this.labelNombre);
+            this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(443, 311);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Alumnos";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtBuscarApellido);
+            this.groupBox2.Controls.Add(this.btnBuscarPorNombre);
+            this.groupBox2.Controls.Add(this.txtBuscarNombre);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Location = new System.Drawing.Point(6, 27);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(431, 68);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Buscar Alumno";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Nombre:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(177, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Apellido:";
+            // 
+            // txtBuscarNombre
+            // 
+            this.txtBuscarNombre.Location = new System.Drawing.Point(71, 30);
+            this.txtBuscarNombre.Name = "txtBuscarNombre";
+            this.txtBuscarNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarNombre.TabIndex = 2;
+            // 
+            // btnBuscarPorNombre
+            // 
+            this.btnBuscarPorNombre.Location = new System.Drawing.Point(350, 28);
+            this.btnBuscarPorNombre.Name = "btnBuscarPorNombre";
+            this.btnBuscarPorNombre.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarPorNombre.TabIndex = 3;
+            this.btnBuscarPorNombre.Text = "Buscar";
+            this.btnBuscarPorNombre.UseVisualStyleBackColor = true;
+            this.btnBuscarPorNombre.Click += new System.EventHandler(this.btnBuscarPorNombre_Click);
+            // 
+            // txtBuscarApellido
+            // 
+            this.txtBuscarApellido.Location = new System.Drawing.Point(233, 30);
+            this.txtBuscarApellido.Name = "txtBuscarApellido";
+            this.txtBuscarApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarApellido.TabIndex = 4;
+            // 
+            // labelNombre
+            // 
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.Location = new System.Drawing.Point(23, 147);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(47, 13);
+            this.labelNombre.TabIndex = 1;
+            this.labelNombre.Text = "Nombre:";
+            // 
+            // labelApel
+            // 
+            this.labelApel.AutoSize = true;
+            this.labelApel.Location = new System.Drawing.Point(183, 147);
+            this.labelApel.Name = "labelApel";
+            this.labelApel.Size = new System.Drawing.Size(47, 13);
+            this.labelApel.TabIndex = 2;
+            this.labelApel.Text = "Apellido:";
+            // 
+            // labelNac
+            // 
+            this.labelNac.AutoSize = true;
+            this.labelNac.Location = new System.Drawing.Point(23, 197);
+            this.labelNac.Name = "labelNac";
+            this.labelNac.Size = new System.Drawing.Size(111, 13);
+            this.labelNac.TabIndex = 3;
+            this.labelNac.Text = "Fecha de Nacimiento:";
+            // 
+            // labelDNI
+            // 
+            this.labelDNI.AutoSize = true;
+            this.labelDNI.Location = new System.Drawing.Point(301, 147);
+            this.labelDNI.Name = "labelDNI";
+            this.labelDNI.Size = new System.Drawing.Size(29, 13);
+            this.labelDNI.TabIndex = 4;
+            this.labelDNI.Text = "DNI:";
+            // 
+            // labelCarr
+            // 
+            this.labelCarr.AutoSize = true;
+            this.labelCarr.Location = new System.Drawing.Point(26, 253);
+            this.labelCarr.Name = "labelCarr";
+            this.labelCarr.Size = new System.Drawing.Size(44, 13);
+            this.labelCarr.TabIndex = 5;
+            this.labelCarr.Text = "Carrera:";
+            // 
+            // labelYear
+            // 
+            this.labelYear.AutoSize = true;
+            this.labelYear.Location = new System.Drawing.Point(301, 253);
+            this.labelYear.Name = "labelYear";
+            this.labelYear.Size = new System.Drawing.Size(29, 13);
+            this.labelYear.TabIndex = 6;
+            this.labelYear.Text = "Año:";
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(23, 107);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(21, 13);
+            this.labelID.TabIndex = 7;
+            this.labelID.Text = "ID:";
+            this.labelID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 
@@ -351,6 +506,10 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -385,6 +544,20 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtBuscarApellido;
+        private System.Windows.Forms.Button btnBuscarPorNombre;
+        private System.Windows.Forms.TextBox txtBuscarNombre;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label labelYear;
+        private System.Windows.Forms.Label labelCarr;
+        private System.Windows.Forms.Label labelDNI;
+        private System.Windows.Forms.Label labelNac;
+        private System.Windows.Forms.Label labelApel;
+        private System.Windows.Forms.Label labelNombre;
+        private System.Windows.Forms.Label labelID;
     }
 }
 
